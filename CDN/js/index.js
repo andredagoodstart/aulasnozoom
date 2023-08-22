@@ -109,7 +109,7 @@ function websdkready() {
           console.log(res.result);
           meetingConfig.signature = res.result;
           meetingConfig.sdkKey = CLIENT_ID;
-          var joinUrl = "C:/Users/andre/Downloads/meetingsdk-web-sample-master/meetingsdk-web-sample-master/CDN/meeting.html?" + testTool.serialize(meetingConfig);
+          var joinUrl = "https://andredagoodstart.github.io/aulasnozoom/CDN/meeting.html?" + testTool.serialize(meetingConfig);
           console.log(joinUrl);
           window.open(joinUrl, "_blank");
         },
@@ -143,7 +143,7 @@ function websdkready() {
         meetingConfig.sdkKey = CLIENT_ID;
         var joinUrl =
           testTool.getCurrentDomain() +
-          "C:/Users/andre/Downloads/meetingsdk-web-sample-master/meetingsdk-web-sample-master/CDN/meeting.html?" +
+          "https://andredagoodstart.github.io/aulasnozoom/CDN/meeting.html?" +
           testTool.serialize(meetingConfig);
         document.getElementById('copy_link_value').setAttribute('link', joinUrl);
         copyToClipboard('copy_link_value');
