@@ -11,7 +11,14 @@
 </head>
 
 <body>
-    <style>
+   <style>
+  #clear_all {display:none;}
+#copy_join_link {display:none;}
+#meeting_email {display:none;}
+#meeting_role {display:none;}
+#meeting_china {display:none;}
+#meeting_lang {display:none;}
+  
         .sdk-select {
             height: 34px;
             border-radius: 4px;
@@ -57,21 +64,21 @@
     <nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Zoom WebSDK CDN</a>
+                <a class="navbar-brand" href="#">Aulas do André</a>
             </div>
             <div id="navbar" class="websdktest">
                 <form class="navbar-form navbar-right" id="meeting_form">
                     <div class="form-group">
-                        <input type="text" name="display_name" id="display_name" value="2.15.2#CDN" maxLength="100"
+                        <input type="text" name="display_name" id="display_name" value="New student" maxLength="100"
                             placeholder="Name" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="meeting_number" id="meeting_number" value="" maxLength="200"
-                            style="width:150px" placeholder="Meeting Number" class="form-control" required>
+                        <input type="text" name="meeting_number" id="meeting_number" value="XXXXXXXXXX" maxLength="200"
+                            style="width:150px" placeholder="Código da aula" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="meeting_pwd" id="meeting_pwd" value="" style="width:150px"
-                            maxLength="32" placeholder="Meeting Password" class="form-control">
+                        <input type="text" name="meeting_pwd" id="meeting_pwd" value="000000" style="width:150px"
+                            maxLength="32" placeholder="Senha da aula" class="form-control">
                     </div>
                     <div class="form-group">
                         <input type="text" name="meeting_email" id="meeting_email" value="" style="width:150px"
@@ -81,34 +88,26 @@
                     <div class="form-group">
                         <select id="meeting_role" class="sdk-select">
                             <option value=0>Attendee</option>
-                            <option value=1>Host</option>
+                            
                         </select>
                     </div>
                     <div class="form-group">
                         <select id="meeting_china" class="sdk-select">
                             <option value=0>Global</option>
-                            <option value=1>China</option>
+                            
                         </select>
                     </div>
                     <div class="form-group">
                         <select id="meeting_lang" class="sdk-select">
-                            <option value="en-US">English</option>
-                            <option value="de-DE">German Deutsch</option>
-                            <option value="es-ES">Spanish Español</option>
-                            <option value="fr-FR">French Français</option>
-                            <option value="jp-JP">Japanese 日本語</option>
-                            <option value="pt-PT">Portuguese Portuguese</option>
-                            <option value="ru-RU">Russian Русский</option>
-                            <option value="zh-CN">Chinese 简体中文</option>
-                            <option value="zh-TW">Chinese 繁体中文</option>
-                            <option value="ko-KO">Korean 한국어</option>
-                            <option value="vi-VN">Vietnamese Tiếng Việt</option>
-                            <option value="it-IT">Italian italiano</option>
+                          <option value="pt-PT">Portuguese Portuguese</option>  
+                          <option value="en-US">English</option>                     
+                            
+                            
                         </select>
                     </div>
 
                     <input type="hidden" value="" id="copy_link_value" />
-                    <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
+                    <button type="submit" class="btn btn-primary" id="join_meeting">Entrar na aula</button>
                     <button type="submit" class="btn btn-primary" id="clear_all">Clear</button>
                     <button type="button" link="" onclick="window.copyJoinLink('#copy_join_link')"
                         class="btn btn-primary" id="copy_join_link">Copy Direct join link</button>
@@ -120,33 +119,15 @@
         </div>
     </nav>
 
-
-    <div id="show-test-tool">
-        <button type="submit" class="btn btn-primary" id="show-test-tool-btn"
-            title="show or hide top test tool">Show</button>
-    </div>
-    <script>
-        document.getElementById('show-test-tool-btn').addEventListener("click", function (e) {
-            var textContent = e.target.textContent;
-            if (textContent === 'Show') {
-                document.getElementById('nav-tool').style.display = 'block';
-                document.getElementById('show-test-tool-btn').textContent = 'Hide';
-            } else {
-                document.getElementById('nav-tool').style.display = 'none';
-                document.getElementById('show-test-tool-btn').textContent = 'Show';
-            }
-        })
-    </script>
-
     <script src="https://source.zoom.us/2.15.2/lib/vendor/react.min.js"></script>
     <script src="https://source.zoom.us/2.15.2/lib/vendor/react-dom.min.js"></script>
     <script src="https://source.zoom.us/2.15.2/lib/vendor/redux.min.js"></script>
     <script src="https://source.zoom.us/2.15.2/lib/vendor/redux-thunk.min.js"></script>
     <script src="https://source.zoom.us/2.15.2/lib/vendor/lodash.min.js"></script>
     <script src="https://source.zoom.us/zoom-meeting-2.15.2.min.js"></script>
-    <script src="js/tool.js"></script>
-    <script src="js/vconsole.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="https://andredagoodstart.github.io/aulasnozoom/CDN/js/tool.js"></script>
+    <script src="https://andredagoodstart.github.io/aulasnozoom/CDN/js/vconsole.min.js"></script>
+    <script src="https://andredagoodstart.github.io/aulasnozoom/CDN/js/index.js"></script>
 
     <script>
 
