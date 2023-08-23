@@ -26,18 +26,7 @@ function websdkready() {
   var CLIENT_SECRET = "YqrTryIkenBLHZPW70PQCEsi7KT3E2nV";
 
   // some help code, remember mn, pwd, lang to cookie, and autofill.
-  document.getElementById("display_name").value =
-    "CDN" +
-    ZoomMtg.getWebSDKVersion()[0] +
-    testTool.detectOS() +
-    "#" +
-    testTool.getBrowserInfo();
-  document.getElementById("meeting_number").value = testTool.getCookie(
-    "meeting_number"
-  );
-  document.getElementById("meeting_pwd").value = testTool.getCookie(
-    "meeting_pwd"
-  );
+  
   if (testTool.getCookie("meeting_lang"))
     document.getElementById("meeting_lang").value = testTool.getCookie(
       "meeting_lang"
