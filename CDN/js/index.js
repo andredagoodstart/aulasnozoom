@@ -28,17 +28,13 @@ function websdkready() {
   // some help code, remember mn, pwd, lang to cookie, and autofill.
   
 document.getElementById("display_name").value =
-    "CDN" +
-    ZoomMtg.getWebSDKVersion()[0] +
-    testTool.detectOS() +
-    "#" +
-    testTool.getBrowserInfo();
-  document.getElementById("meeting_number").value = testTool.getCookie(
-    "meeting_number"
-  );
-  document.getElementById("meeting_pwd").value = testTool.getCookie(
-    "meeting_pwd"
-  );
+    "";
+
+  document.getElementById("meeting_number").value = "9218409306"
+  ;
+  document.getElementById("meeting_pwd").value = "247171"
+  ;
+
   if (testTool.getCookie("meeting_lang"))
     document.getElementById("meeting_lang").value = testTool.getCookie(
       "meeting_lang"
