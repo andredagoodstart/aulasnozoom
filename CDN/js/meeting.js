@@ -28,7 +28,7 @@ function websdkready() {
       );
     })(),
     passWord: tmpArgs.pwd,
-    leaveUrl: "/index.html",
+    leaveUrl: "https://goodstart.com.br/area-do-aluno",
     role: parseInt(tmpArgs.role, 10),
     userEmail: (function () {
       try {
