@@ -109,7 +109,7 @@ function websdkready() {
           console.log(res.result);
           meetingConfig.signature = res.result;
           meetingConfig.sdkKey = CLIENT_ID;
-          var joinUrl = "https://goodstart.com.br/area-do-aluno/provas/provinhas/c1" + testTool.serialize(meetingConfig);
+          var joinUrl = "https://goodstart.com.br/area-do-aluno/provas/provinhas/c1?" + testTool.serialize(meetingConfig);
           console.log(joinUrl);
           window.open(joinUrl, "_blank");
         },
@@ -143,7 +143,7 @@ function websdkready() {
         meetingConfig.sdkKey = CLIENT_ID;
         var joinUrl =
           testTool.getCurrentDomain() +
-          "https://goodstart.com.br/area-do-aluno/provas/provinhas/c1" +
+          "https://goodstart.com.br/area-do-aluno/provas/provinhas/c1?" +
           testTool.serialize(meetingConfig);
         document.getElementById('copy_link_value').setAttribute('link', joinUrl);
         copyToClipboard('copy_link_value');
