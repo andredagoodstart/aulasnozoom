@@ -27,6 +27,17 @@ function websdkready() {
 
   // some help code, remember mn, pwd, lang to cookie, and autofill.
   
+  document.getElementById("meeting_number").value = testTool.getCookie(
+    "meeting_number"
+  );
+  document.getElementById("meeting_pwd").value = testTool.getCookie(
+    "meeting_pwd"
+  );
+  if (testTool.getCookie("meeting_lang"))
+    document.getElementById("meeting_lang").value = testTool.getCookie(
+      "meeting_lang"
+    );
+  
   if (testTool.getCookie("meeting_lang"))
     document.getElementById("meeting_lang").value = testTool.getCookie(
       "meeting_lang"
